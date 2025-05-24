@@ -1,6 +1,23 @@
 import "@/styles/globals.css";
+import {
+  HydrationBoundary,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import type { AppProps } from "next/app";
+import React, { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  const [queryClient] = useState(() => new QueryClient());
+  return (
+    <>
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <HydrationBoundary state={pageProps.dehydratedState}>
+          <Component {...pageProps} />;
+        </HydrationBoundary>
+      </QueryClientProvider>
+    </>
+  );
 }
