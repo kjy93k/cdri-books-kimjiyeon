@@ -1,4 +1,6 @@
-import "@/styles/globals.css";
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "@/styles/theme";
+import GlobalStyle from "@/styles/GlobalStyle";
 import {
   HydrationBoundary,
   QueryClient,
@@ -15,7 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <HydrationBoundary state={pageProps.dehydratedState}>
-          <Component {...pageProps} />;
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Component {...pageProps} />;
+          </ThemeProvider>
         </HydrationBoundary>
       </QueryClientProvider>
     </>
