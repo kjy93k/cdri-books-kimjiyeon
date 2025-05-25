@@ -9,6 +9,7 @@ import {
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import type { AppProps } from "next/app";
 import React, { useState } from "react";
+import Layout from "@/components/Layout/indetx";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(() => new QueryClient());
@@ -19,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <HydrationBoundary state={pageProps.dehydratedState}>
           <ThemeProvider theme={theme}>
             <GlobalStyle />
-            <Component {...pageProps} />;
+            <Layout>
+              <Component {...pageProps} />;
+            </Layout>
           </ThemeProvider>
         </HydrationBoundary>
       </QueryClientProvider>
