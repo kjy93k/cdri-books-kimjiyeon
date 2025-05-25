@@ -6,7 +6,7 @@ import {
   NavLinkStyle,
   NavStyle,
   RightSide,
-} from "./Header";
+} from "./Header.style";
 
 const Header = () => {
   const router = useRouter();
