@@ -1,3 +1,5 @@
+import { pxToRem } from "./utils/pxToRem";
+
 export const theme = {
   colors: {
     palette: {
@@ -18,43 +20,43 @@ export const theme = {
   typography: {
     title1: {
       fontWeight: 700,
-      fontSize: "24px",
-      lineHeight: "24px",
+      fontSize: `${pxToRem(24)}`,
+      lineHeight: `${pxToRem(24)}`,
     },
     title2: {
       fontWeight: 700,
-      fontSize: "22px",
-      lineHeight: "24px",
+      fontSize: `${pxToRem(22)}`,
+      lineHeight: `${pxToRem(24)}`,
     },
     title3: {
       fontWeight: 700,
-      fontSize: "18px",
-      lineHeight: "18px",
+      fontSize: `${pxToRem(18)}`,
+      lineHeight: `${pxToRem(18)}`,
     },
     body1: {
       fontWeight: 500,
-      fontSize: "20px",
-      lineHeight: "20px",
+      fontSize: `${pxToRem(20)}`,
+      lineHeight: `${pxToRem(20)}`,
     },
     body2: {
       fontWeight: 500,
-      fontSize: "14px",
-      lineHeight: "14px",
+      fontSize: `${pxToRem(14)}`,
+      lineHeight: `${pxToRem(14)}`,
     },
     body2Bold: {
       fontWeight: 700,
-      fontSize: "14px",
-      lineHeight: "14px",
+      fontSize: `${pxToRem(14)}`,
+      lineHeight: `${pxToRem(14)}`,
     },
     caption: {
       fontWeight: 500,
-      fontSize: "16px",
-      lineHeight: "16px",
+      fontSize: `${pxToRem(16)}`,
+      lineHeight: `${pxToRem(16)}`,
     },
     small: {
       fontWeight: 500,
-      fontSize: "10px",
-      lineHeight: "10px",
+      fontSize: `${pxToRem(10)}`,
+      lineHeight: `${pxToRem(10)}`,
     },
   },
 } as const;
