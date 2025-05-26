@@ -1,6 +1,4 @@
-import Section from "@/components/Section";
-import { theme } from "@/styles/theme";
-import { css } from "@emotion/react";
+import Search from "@/components/page/Search";
 import Head from "next/head";
 
 export default function Home() {
@@ -19,23 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
-        <Section.Title>도서 검색</Section.Title>
-        <Section.SubTitle>
-          <span>도서 검색 결과</span>
-          <span>
-            총{" "}
-            <span
-              css={css`
-                color: ${theme.colors.palette.primary};
-              `}
-            >
-              21
-            </span>
-            건
-          </span>
-        </Section.SubTitle>
-      </Section>
+      <Search />
     </>
   );
 }

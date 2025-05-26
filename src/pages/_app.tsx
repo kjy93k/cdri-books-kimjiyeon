@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Layout>
-              <Component {...pageProps} />;
+              <Component {...pageProps} />
             </Layout>
           </ThemeProvider>
         </HydrationBoundary>

@@ -8,11 +8,13 @@ const sizeStyle: Record<ButtonSize, SerializedStyles> = {
   sm: css`
     ${theme.typography.body2};
     min-width: ${pxToRem(72)};
+    height: ${pxToRem(36)};
     padding: ${pxToRem(10)};
   `,
   md: css`
     ${theme.typography.caption};
     min-width: ${pxToRem(115)};
+    height: ${pxToRem(48)};
     padding: ${pxToRem(16)};
   `,
 };
@@ -43,6 +45,7 @@ const VariantStyle: Record<ButtonVariant, SerializedStyles> = {
   plain: css`
     min-width: 0;
     padding: 0;
+    height: auto;
   `,
 };
 
@@ -54,6 +57,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
   justify-content: center;
   border: 1px solid transparent;
   border-radius: ${pxToRem(8)};
+  background: transparent;
   ${({ size = "md" }) => sizeStyle[size]};
   ${({ fillColor }) => fillColor && fillColorStyle[fillColor]};
   ${({ variant = "fill" }) => VariantStyle[variant]};
