@@ -10,6 +10,13 @@ import { useSearchBarContext } from "..";
 const SearchBarHistory = ({}: ComponentBaseProps) => {
   const { histories, removeHistory } = useSearchHistory();
   const { handleSearch } = useSearchBarContext();
+  const { setIsOpen } = useSearchBarContext();
+
+  const handleRemoveHistory = (index: number) => {
+    console.log(histories.length);
+    if (histories.length <= 1) setIsOpen(false);
+    removeHistory(index);
+  };
 
   return (
     <InputBarHistory>
@@ -23,7 +30,7 @@ const SearchBarHistory = ({}: ComponentBaseProps) => {
               <Button
                 type="button"
                 variant="plain"
-                onClick={() => removeHistory(index)}
+                onClick={() => handleRemoveHistory(index)}
               >
                 <Icon
                   name={"close"}

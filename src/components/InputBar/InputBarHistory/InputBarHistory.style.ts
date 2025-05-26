@@ -25,8 +25,10 @@ export const InputBarSearchStyle = styled.div<{ isOpen: boolean }>(
 export const InputBarHistoryStyle = styled.div(({ theme }) => ({
   display: "none",
   position: "absolute",
+  zIndex: 1,
   top: SearchBarHeight,
   left: 0,
+  overflow: "hidden",
   width: "100%",
   backgroundColor: `${theme.colors.palette.lightGray}`,
   borderBottomLeftRadius: SearchBarBorderRadius,

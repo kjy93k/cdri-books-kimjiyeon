@@ -10,6 +10,7 @@ import { css } from "@emotion/react";
 import { ComponentBaseProps } from "@/pages/types/component";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { useSearchBarContext } from "..";
+import { useSearchHistory } from "@/hooks/useSearchHistory";
 
 const SearchBarForm = ({ children }: ComponentBaseProps) => {
   const router = useRouter();
@@ -17,6 +18,7 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
   const searchQuery = router.query.search;
   const { isOpen, setIsOpen, search, setSearch, handleSearch } =
     useSearchBarContext();
+  const { histories } = useSearchHistory();
 
   useClickOutside(searchBarRef, () => {
     setIsOpen(false);
@@ -53,7 +55,7 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
             name="search"
             enterKeyHint="search"
             value={search}
-            onFocus={() => setIsOpen(true)}
+            onFocus={() => histories.length > 0 && setIsOpen(true)}
             onChange={(e) => setSearch(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             autoComplete="off"

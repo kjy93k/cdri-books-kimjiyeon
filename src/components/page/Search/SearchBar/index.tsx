@@ -21,19 +21,23 @@ const SearchBar = () => {
   const [search, setSearch] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const { addHistory } = useSearchHistory();
+  const { histories } = useSearchHistory();
 
   const handleSearch = (history?: string) => {
     const keyword = (history ?? search).trim();
     if (!keyword) return;
     addHistory(keyword);
     router.replace(`?search=${encodeURIComponent(keyword)}`);
+    setIsOpen(false);
   };
 
   const value = { search, setSearch, isOpen, setIsOpen, handleSearch };
   return (
     <>
       <Provider value={value}>
-        <SearchBarForm>{isOpen && <SearchBarHistory />}</SearchBarForm>
+        <SearchBarForm>
+          {isOpen && histories.length > 0 && <SearchBarHistory />}
+        </SearchBarForm>
       </Provider>
     </>
   );
