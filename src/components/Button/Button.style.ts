@@ -2,7 +2,7 @@ import { theme } from "@/styles/theme";
 import { pxToRem } from "@/styles/utils/pxToRem";
 import { css, SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
-import { ButtonFillColor, ButtonProps, ButtonSize } from ".";
+import { ButtonFillColor, ButtonProps, ButtonSize, ButtonVariant } from ".";
 
 const sizeStyle: Record<ButtonSize, SerializedStyles> = {
   sm: css`
@@ -34,6 +34,17 @@ const fillColorStyle: Record<ButtonFillColor, SerializedStyles> = {
     border-color: ${theme.colors.text.subtitle};
   `,
 };
+const VariantStyle: Record<ButtonVariant, SerializedStyles> = {
+  fill: css``,
+  outline: css`
+    background-color: ${theme.colors.palette.white};
+    color: ${theme.colors.text.subtitle};
+  `,
+  plain: css`
+    min-width: 0;
+    padding: 0;
+  `,
+};
 
 export const ButtonStyle = styled.button<ButtonProps>`
   cursor: pointer;
@@ -45,12 +56,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
   border-radius: ${pxToRem(8)};
   ${({ size = "md" }) => sizeStyle[size]};
   ${({ fillColor }) => fillColor && fillColorStyle[fillColor]};
-  ${({ variant = "fill" }) =>
-    variant === "outline" &&
-    css`
-      background-color: ${theme.colors.palette.white};
-      color: ${theme.colors.text.subtitle};
-    `}
+  ${({ variant = "fill" }) => VariantStyle[variant]};
   ${({ isWide = false }) =>
     isWide &&
     css`

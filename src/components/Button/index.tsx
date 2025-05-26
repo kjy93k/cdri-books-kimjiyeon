@@ -4,7 +4,7 @@ import { ButtonStyle } from "./Button.style";
 import { theme } from "@/styles/theme";
 
 export type ButtonSize = "sm" | "md";
-export type ButtonVariant = "fill" | "outline";
+export type ButtonVariant = "fill" | "outline" | "plain";
 export type ButtonFillColor = keyof (Pick<
   typeof theme.colors.palette,
   "primary" | "lightGray"

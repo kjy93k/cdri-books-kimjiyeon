@@ -38,7 +38,7 @@ const BasicInputStyle = css`
   }
 
   &::placeholder {
-    color: ${theme.colors.text.secondary};
+    color: ${theme.colors.text.subtitle};
   }
   &:active,
   &:focus,
@@ -64,13 +64,4 @@ export const InputLabelStyle = styled.label`
   flex-direction: row;
   gap: ${pxToRem(10)};
   align-items: center;
-`;
-
-export const InputBarSearchStyle = css`
-  padding: ${pxToRem(10)};
-  background: ${theme.colors.palette.lightGray};
-  max-width: ${pxToRem(480)};
-  height: ${pxToRem(50)};
-  border-radius: ${pxToRem(100)};
-  align-content: center;
 `;
