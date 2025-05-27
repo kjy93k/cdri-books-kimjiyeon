@@ -11,6 +11,7 @@ import { ComponentBaseProps } from "@/pages/types/component";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { useSearchBarContext } from "..";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
+import SearchBarTargetButton from "./SearchBarTargetButton";
 
 const SearchBarForm = ({ children }: ComponentBaseProps) => {
   const router = useRouter();
@@ -32,12 +33,10 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
 
   return (
     <InputBar
-      onSubmit={(e) => {
-        e.preventDefault();
-      }}
       css={css`
         display: flex;
         gap: ${pxToRem(16)};
+        align-items: center;
       `}
     >
       <InputBarSearchStyle
@@ -57,7 +56,13 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
             value={search}
             onFocus={() => histories.length > 0 && setIsOpen(true)}
             onChange={(e) => setSearch(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            onKeyUp={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                e.stopPropagation();
+                handleSearch();
+              }
+            }}
             autoComplete="off"
           />
           {search && (
@@ -74,9 +79,7 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
         </InputBar.Label>
         {children}
       </InputBarSearchStyle>
-      <Button size="sm" fillColor="subtitle" variant="outline">
-        상세검색
-      </Button>
+      <SearchBarTargetButton />
     </InputBar>
   );
 };

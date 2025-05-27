@@ -1,18 +1,19 @@
 import BookList from "@/components/BookList";
-import Button from "@/components/Button";
-import Icon from "@/components/Icon";
 import { useSearchBooks } from "@/hooks/useSearchBooks";
 import { decodeText } from "@/lib/utils/decodeText";
 import { priceFormat } from "@/lib/utils/priceFormat";
+import { searchTarget } from "@/pages/types/book";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const SearchResult = () => {
   const router = useRouter();
   const query = router.query.search as string;
+  const target = (router.query.target as searchTarget) ?? "title";
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useSearchBooks({
-      query: query,
+      query,
+      target,
     });
 
   const observerRef = useRef<HTMLDivElement>(null);

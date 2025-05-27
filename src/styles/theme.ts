@@ -20,6 +20,7 @@ export const theme = {
     },
     ui: {
       gray: "#B1B8C0",
+      boxShadow: "#979797",
     },
   },
 

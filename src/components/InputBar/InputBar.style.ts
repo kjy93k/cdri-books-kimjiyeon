@@ -54,7 +54,7 @@ const BasicInputStyle = css`
   }
 `;
 
-export const InPutStyle = styled.input`
+export const InputStyle = styled.input`
   ${BasicInputStyle}
 `;
 

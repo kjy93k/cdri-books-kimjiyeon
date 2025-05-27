@@ -5,6 +5,7 @@ import { ComponentBaseProps } from "@/pages/types/component";
 import { BookListItemToggleButtonStyle } from "../BookList.style";
 import { css } from "@emotion/react";
 import { pxToRem } from "@/styles/utils/pxToRem";
+import { theme } from "@/styles/theme";
 
 const BookListItemToggleButton = ({ children }: ComponentBaseProps) => {
   const { isOpen, setIsOpen } = useBookListItemContext();
@@ -21,7 +22,7 @@ const BookListItemToggleButton = ({ children }: ComponentBaseProps) => {
         <Icon
           name={"arrowDown"}
           css={css`
-            color: #b1b8c0;
+            color: ${theme.colors.ui.gray};
             transform: rotate(${isOpen ? 180 : 0}deg);
           `}
         ></Icon>

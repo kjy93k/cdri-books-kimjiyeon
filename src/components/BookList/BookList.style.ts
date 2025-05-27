@@ -14,7 +14,7 @@ export const BookListItemStyle = styled.li<BookListItemProps>(
     justifyContent: "space-between",
     gap: pxToRem(8),
     padding: pxToRem([16, 16, 16, 48]),
-    borderBottom: `1px solid #D2D6DA`,
+    borderBottom: `1px solid ${theme.colors.border.primary}`,
     ...(isOpen && {
       padding: pxToRem([24, 16, 40, 54]),
     }),

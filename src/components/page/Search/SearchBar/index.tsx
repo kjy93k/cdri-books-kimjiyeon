@@ -1,8 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
-import { useRouter } from "next/router";
 import SearchBarHistory from "./SearchBarHistory";
 import SearchBarForm from "./SearchBarForm";
+import { useSearchHandler } from "@/hooks/useHandleSearch";
 
 const SearchBarContext = createContext({
   search: "",
@@ -17,19 +17,15 @@ export const useSearchBarContext = () => {
 const { Provider } = SearchBarContext;
 
 const SearchBar = () => {
-  const router = useRouter();
   const [search, setSearch] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const { addHistory } = useSearchHistory();
   const { histories } = useSearchHistory();
-
-  const handleSearch = (history?: string) => {
-    const keyword = (history ?? search).trim();
-    if (!keyword) return;
-    addHistory(keyword);
-    router.replace(`?search=${encodeURIComponent(keyword)}`);
-    setIsOpen(false);
-  };
+  const { handleSearch } = useSearchHandler({
+    searchText: search,
+    onComplete: () => {
+      setIsOpen(false);
+    },
+  });
 
   const value = { search, setSearch, isOpen, setIsOpen, handleSearch };
   return (

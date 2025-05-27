@@ -20,7 +20,11 @@ export interface ButtonProps
 }
 
 const Button = ({ children, ...props }: ButtonProps) => {
-  return <ButtonStyle {...props}>{children}</ButtonStyle>;
+  return (
+    <ButtonStyle type="button" {...props}>
+      {children}
+    </ButtonStyle>
+  );
 };
 
 export default Button;
