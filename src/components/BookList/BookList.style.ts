@@ -1,6 +1,7 @@
 import { pxToRem } from "@/styles/utils/pxToRem";
 import styled from "@emotion/styled";
 import { BookListItemProps } from "./BookListItem";
+import { media } from "@/styles/utils/media";
 
 export const BookListStyle = styled.ul<BookListItemProps>(
   ({ theme, isOpen }) => ({})
@@ -17,7 +18,14 @@ export const BookListItemStyle = styled.li<BookListItemProps>(
     borderBottom: `1px solid ${theme.colors.border.primary}`,
     ...(isOpen && {
       padding: pxToRem([24, 16, 40, 54]),
+      minHeight: pxToRem(250),
     }),
+    [media.underTablet]: {
+      paddingLeft: pxToRem(16),
+      ...(!isOpen && {
+        flexWrap: "wrap",
+      }),
+    },
   })
 );
 
@@ -31,6 +39,12 @@ export const BookListInfoStyle = styled.div<BookListItemProps>(
       alignItems: "flex-start",
       gap: pxToRem(32),
     }),
+    [media.underTablet]: {
+      ...(!isOpen && {
+        width: "100%",
+        flexShrink: 0,
+      }),
+    },
   })
 );
 
@@ -49,6 +63,11 @@ export const BookListPurchaseStyle = styled.div<BookListItemProps>(
       gap: pxToRem(8),
       width: pxToRem(240),
     }),
+    [media.underTablet]: {
+      ...(isOpen && {
+        width: "auto",
+      }),
+    },
   })
 );
 
@@ -64,6 +83,12 @@ export const BookListThumbStyle = styled.span<BookListItemProps>(
       width: pxToRem(210),
       height: pxToRem(280),
     }),
+    [media.underTablet]: {
+      ...(isOpen && {
+        width: pxToRem(120),
+        height: pxToRem(160),
+      }),
+    },
   })
 );
 

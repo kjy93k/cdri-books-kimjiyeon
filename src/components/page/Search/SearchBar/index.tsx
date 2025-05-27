@@ -2,7 +2,10 @@ import { createContext, useContext, useState } from "react";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
 import SearchBarHistory from "./SearchBarHistory";
 import SearchBarForm from "./SearchBarForm";
-import { useSearchHandler } from "@/hooks/useHandleSearch";
+import { useSearchHandler } from "@/hooks/useSearchHandler";
+import SearchBarTargetButton from "./SearchBarForm/SearchBarTargetButton";
+import { css } from "@emotion/react";
+import { pxToRem } from "@/styles/utils/pxToRem";
 
 const SearchBarContext = createContext({
   search: "",
@@ -31,9 +34,18 @@ const SearchBar = () => {
   return (
     <>
       <Provider value={value}>
-        <SearchBarForm>
-          {isOpen && histories.length > 0 && <SearchBarHistory />}
-        </SearchBarForm>
+        <div
+          css={css`
+            display: flex;
+            gap: ${pxToRem(16)};
+            align-items: center;
+          `}
+        >
+          <SearchBarForm>
+            {isOpen && histories.length > 0 && <SearchBarHistory />}
+          </SearchBarForm>
+          <SearchBarTargetButton />
+        </div>
       </Provider>
     </>
   );

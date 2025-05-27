@@ -20,7 +20,7 @@ const BookListThumb = ({
           css={css`
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
           `}
           width={210}
           height={280}

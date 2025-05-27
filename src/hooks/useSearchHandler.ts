@@ -9,12 +9,12 @@ interface UseSearchHandlerOptions {
 
 export const useSearchHandler = ({
   searchText,
-  searchTarget = "title",
+  searchTarget,
   onComplete,
 }: UseSearchHandlerOptions) => {
   const router = useRouter();
   const { addHistory } = useSearchHistory();
-
+  console.log(searchTarget);
   const handleSearch = (keywordOverride?: string) => {
     const keyword = (keywordOverride ?? searchText).trim();
     if (!keyword) return;
@@ -24,7 +24,7 @@ export const useSearchHandler = ({
       pathname: "/",
       query: {
         search: keyword,
-        target: searchTarget,
+        ...(searchTarget && { target: searchTarget }),
       },
     });
 

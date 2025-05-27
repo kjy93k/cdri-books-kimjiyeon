@@ -2,9 +2,9 @@ import { pxToRem } from "@/styles/utils/pxToRem";
 import styled from "@emotion/styled";
 
 export const SectionStyle = styled.section(({ theme }) => ({
-  maxWidth: pxToRem(960),
+  maxWidth: pxToRem(992), // 좌우 여백 포함
   margin: "0 auto",
-  padding: pxToRem([160, 0]),
+  padding: pxToRem([160, 16]),
 }));
 
 export const SectionTitleStyle = styled.h2(({ theme }) => ({

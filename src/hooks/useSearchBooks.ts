@@ -1,12 +1,8 @@
 import { getBooks } from "@/lib/api/book";
-import { BookSearchParams, searchTarget } from "@/types/book";
+import { BookSearchParams } from "@/types/book";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 export const useSearchBooks = (params: BookSearchParams) => {
-  const paramsWithTarget = {
-    target: "title" as searchTarget,
-    ...params,
-  };
   const {
     data,
     fetchNextPage,
@@ -15,9 +11,8 @@ export const useSearchBooks = (params: BookSearchParams) => {
     isLoading,
     isError,
   } = useInfiniteQuery({
-    queryKey: ["books", paramsWithTarget],
-    queryFn: ({ pageParam = 1 }) =>
-      getBooks({ ...paramsWithTarget, page: pageParam }),
+    queryKey: ["books", params],
+    queryFn: ({ pageParam = 1 }) => getBooks({ ...params, page: pageParam }),
     getNextPageParam: (lastPage, allPages) => {
       return lastPage?.meta.is_end ? undefined : allPages?.length + 1;
     },

@@ -32,20 +32,14 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
   }, [searchQuery, setSearch]);
 
   return (
-    <InputBar
+    <InputBarSearchStyle
+      ref={searchBarRef}
       css={css`
-        display: flex;
-        gap: ${pxToRem(16)};
-        align-items: center;
+        position: relative;
       `}
+      isOpen={isOpen}
     >
-      <InputBarSearchStyle
-        ref={searchBarRef}
-        css={css`
-          position: relative;
-        `}
-        isOpen={isOpen}
-      >
+      <InputBar>
         <InputBar.Label>
           <Icon name={"search"} size={30} />
           <InputBar.Input
@@ -78,9 +72,8 @@ const SearchBarForm = ({ children }: ComponentBaseProps) => {
           )}
         </InputBar.Label>
         {children}
-      </InputBarSearchStyle>
-      <SearchBarTargetButton />
-    </InputBar>
+      </InputBar>
+    </InputBarSearchStyle>
   );
 };
 export default SearchBarForm;

@@ -2,7 +2,7 @@ import InputBar from "@/components/InputBar";
 import Popup from "@/components/Popup";
 import SelectBox from "@/components/SelectBox";
 import { BOOK_SEARCH_TARGET_SORT } from "@/constants/book";
-import { useSearchHandler } from "@/hooks/useHandleSearch";
+import { useSearchHandler } from "@/hooks/useSearchHandler";
 import { theme } from "@/styles/theme";
 import { pxToRem } from "@/styles/utils/pxToRem";
 import { css } from "@emotion/react";
