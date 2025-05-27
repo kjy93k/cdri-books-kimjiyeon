@@ -1,10 +1,12 @@
 export type searchTarget = "title" | "isbn" | "person" | "publisher";
 export type sortType = "accuracy" | "latest";
 
-export interface BookSearchTargetType {
+export interface SelectBoxOptionType<T> {
   title: string;
-  value: searchTarget;
+  value: T;
 }
+
+export type BookSearchTargetType = SelectBoxOptionType<searchTarget>;
 
 export type BookSearchParams = {
   query: string;
