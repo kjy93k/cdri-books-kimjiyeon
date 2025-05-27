@@ -147,8 +147,6 @@ export const useSearchBooks = (params: BookSearchParams) => {
 ### useClickOutside - 외부 클릭 시 닫힘 처리
 
 ```ts
-import { useEffect } from "react";
-
 export function useClickOutside<T extends HTMLElement = HTMLElement>(
   ref: React.RefObject<T | null>,
   handler: (event: MouseEvent) => void
