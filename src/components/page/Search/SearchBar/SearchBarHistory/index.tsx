@@ -13,7 +13,6 @@ const SearchBarHistory = ({}: ComponentBaseProps) => {
   const { setIsOpen } = useSearchBarContext();
 
   const handleRemoveHistory = (index: number) => {
-    console.log(histories.length);
     if (histories.length <= 1) setIsOpen(false);
     removeHistory(index);
   };

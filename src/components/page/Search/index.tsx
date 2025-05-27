@@ -11,7 +11,7 @@ import NoData from "@/components/NoData";
 const Search = () => {
   const router = useRouter();
   const query = router.query.search as string;
-  const target = (router.query.target as searchTarget) ?? "title";
+  const target = router.query.target as searchTarget;
   const { data, isLoading, isError } = useSearchBooks({
     query,
     target,
