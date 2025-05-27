@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import InputBarInput from "./InputBarInput";
 import InputBarLabel from "./InputBarLabel";
 

@@ -1,5 +1,5 @@
 import { getBooks } from "@/lib/api/book";
-import { BookSearchParams, searchTarget } from "@/pages/types/book";
+import { BookSearchParams, searchTarget } from "@/types/book";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 export const useSearchBooks = (params: BookSearchParams) => {

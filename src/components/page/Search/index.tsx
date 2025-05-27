@@ -5,7 +5,7 @@ import SearchResult from "./SearchResult";
 import { css } from "@emotion/react";
 import { useRouter } from "next/router";
 import { useSearchBooks } from "@/hooks/useSearchBooks";
-import { searchTarget } from "@/pages/types/book";
+import { searchTarget } from "@/types/book";
 import NoData from "@/components/NoData";
 
 const Search = () => {

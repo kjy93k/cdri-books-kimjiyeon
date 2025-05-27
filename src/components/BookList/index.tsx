@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import BookListItem from "./BookListItem";
 import { BookListStyle } from "./BookList.style";
 import BookListInfo from "./BookListInfo";

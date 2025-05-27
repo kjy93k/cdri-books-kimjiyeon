@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { BookListDescStyle } from "../BookList.style";
 import { useBookListItemContext } from "../BookListItem";
 import { theme } from "@/styles/theme";

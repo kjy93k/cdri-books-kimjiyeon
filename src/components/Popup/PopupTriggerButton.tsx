@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import Button, { ButtonProps } from "../Button";
 import { usePopupContext } from ".";
 import { SelectBoxTriggerButtonStyle } from "../SelectBox/SelectBox.style";

@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { SelectBoxTitleStyle } from "./SelectBox.style";
 import Icon from "../Icon";
 import { theme } from "@/styles/theme";

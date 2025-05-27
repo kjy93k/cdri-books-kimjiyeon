@@ -1,7 +1,7 @@
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import { useBookListItemContext } from ".";
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { ButtonHTMLAttributes } from "react";
 import { BookListItemBuyButtonStyle } from "../BookList.style";
 

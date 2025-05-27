@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import BookListPrice from "./BookListPrice";
 import BookListPriceSale from "./BookListPriceSale";
 import { BookListPurchaseStyle } from "../BookList.style";

@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { BookListItemStyle } from "../BookList.style";
 import { createContext, useContext, useState } from "react";
 import BookListItemToggleButton from "./BookListItemToggleButton";

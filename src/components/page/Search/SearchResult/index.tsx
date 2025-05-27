@@ -2,7 +2,7 @@ import BookList from "@/components/BookList";
 import { useSearchBooks } from "@/hooks/useSearchBooks";
 import { decodeText } from "@/lib/utils/decodeText";
 import { priceFormat } from "@/lib/utils/priceFormat";
-import { searchTarget } from "@/pages/types/book";
+import { searchTarget } from "@/types/book";
 import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 

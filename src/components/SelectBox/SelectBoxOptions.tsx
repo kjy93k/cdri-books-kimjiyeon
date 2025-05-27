@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { SelectBoxOptionsStyle } from "./SelectBox.style";
 import { useSelectBoxContext } from ".";
 import { useRef } from "react";

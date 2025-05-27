@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { ButtonHTMLAttributes } from "react";
 import { ButtonStyle } from "./Button.style";
 import { theme } from "@/styles/theme";

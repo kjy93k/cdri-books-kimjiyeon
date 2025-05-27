@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { BookListThumbStyle } from "../BookList.style";
 import Image, { ImageProps } from "next/image";
 import { css } from "@emotion/react";

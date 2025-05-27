@@ -1,8 +1,8 @@
 import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import { useFavoriteBooks } from "@/hooks/useFavorite";
-import { BookData } from "@/pages/types/book";
-import { ComponentBaseProps } from "@/pages/types/component";
+import { BookData } from "@/types/book";
+import { ComponentBaseProps } from "@/types/component";
 import { BookListFavoriteButtonStyle } from "../BookList.style";
 import { theme } from "@/styles/theme";
 import { css } from "@emotion/react";

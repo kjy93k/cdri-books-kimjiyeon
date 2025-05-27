@@ -1,7 +1,7 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { SelectBoxOptionStyle } from "./SelectBox.style";
 import { useSelectBoxContext } from ".";
-import { SelectBoxOptionType } from "@/pages/types/book";
+import { SelectBoxOptionType } from "@/types/book";
 
 const SelectBoxOption = ({
   children,

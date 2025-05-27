@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { InputBarHistoryListStyle } from "../InputBarHistory.style";
 
 const InputBarHistoryList = ({ children }: ComponentBaseProps) => {

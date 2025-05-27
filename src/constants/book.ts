@@ -1,4 +1,4 @@
-import { BookSearchTargetType } from "@/pages/types/book";
+import { BookSearchTargetType } from "@/types/book";
 
 export const BOOK_SEARCH_TARGET_SORT: BookSearchTargetType[] = [
   {

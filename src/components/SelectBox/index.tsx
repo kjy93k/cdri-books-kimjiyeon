@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { SelectBoxStyle } from "./SelectBox.style";
 import SelectBoxOptions from "./SelectBoxOptions";
 import SelectBoxOption from "./SelectBoxOption";
@@ -12,7 +12,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { SelectBoxOptionType } from "@/pages/types/book";
+import { SelectBoxOptionType } from "@/types/book";
 
 export interface SelectBoxProps {
   option: SelectBoxOptionType[];

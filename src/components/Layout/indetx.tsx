@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 
 const Layout = ({ children }: ComponentBaseProps) => {
   return (

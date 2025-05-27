@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import BookListAuthor from "./BookListAuthor";
 import BookListContents from "./BookListContents";
 import BookListFavoriteButton from "./BookListFavoriteButton";

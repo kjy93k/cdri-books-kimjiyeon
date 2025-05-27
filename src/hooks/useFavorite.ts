@@ -1,4 +1,4 @@
-import { BookData } from "@/pages/types/book";
+import { BookData } from "@/types/book";
 import { useFavoriteStore } from "@/stores/useFavoriteStore";
 
 export const useFavoriteBooks = () => {

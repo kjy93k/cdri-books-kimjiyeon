@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import SectionTitle from "./SectionTitle";
 import SectionSubTitle from "./SectionSubTitle";
 import { SectionStyle } from "./Section.style";

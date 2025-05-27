@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 import Icon from "@/components/Icon";
 import InputBarHistory from "@/components/InputBar/InputBarHistory";
 import { useSearchHistory } from "@/hooks/useSearchHistory";
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { theme } from "@/styles/theme";
 import { css } from "@emotion/react";
 import { useSearchBarContext } from "..";

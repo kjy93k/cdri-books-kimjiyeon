@@ -3,7 +3,7 @@ import Icon from "@/components/Icon";
 import { theme } from "@/styles/theme";
 import { css } from "@emotion/react";
 
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { usePopupContext } from ".";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { useRef } from "react";

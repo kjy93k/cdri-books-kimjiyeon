@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { InputBarHistoryStyle } from "./InputBarHistory.style";
 import InputBarHistoryList from "./InputBarHistoryList";
 import InputBarHistoryItem from "./InputBarHistoryItem";

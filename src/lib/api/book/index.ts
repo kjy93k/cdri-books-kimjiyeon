@@ -1,4 +1,4 @@
-import { BookData, BookSearchParams } from "@/pages/types/book";
+import { BookData, BookSearchParams } from "@/types/book";
 import axios from "axios";
 const api = axios.create({
   baseURL: "/api",

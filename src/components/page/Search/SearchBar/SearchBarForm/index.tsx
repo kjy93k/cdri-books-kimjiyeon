@@ -7,7 +7,7 @@ import { pxToRem } from "@/styles/utils/pxToRem";
 import { useRouter } from "next/router";
 import { useRef, useEffect } from "react";
 import { css } from "@emotion/react";
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { useSearchBarContext } from "..";
 import { useSearchHistory } from "@/hooks/useSearchHistory";

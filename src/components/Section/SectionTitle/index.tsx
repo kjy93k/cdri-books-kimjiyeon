@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { SectionTitleStyle } from "../Section.style";
 
 const SectionTitle = ({ children, ...props }: ComponentBaseProps) => {

@@ -1,6 +1,6 @@
 import Portal from "@/components/Portal";
 import PopupContent from "./PopupContent";
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { PopupStyle } from "./Popup.style";
 import { createContext, useContext } from "react";
 import { usePopup } from "@/hooks/usePopup";

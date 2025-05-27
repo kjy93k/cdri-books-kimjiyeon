@@ -1,4 +1,4 @@
-import { ComponentBaseProps } from "@/pages/types/component";
+import { ComponentBaseProps } from "@/types/component";
 import { theme } from "@/styles/theme";
 import { pxToRem } from "@/styles/utils/pxToRem";
 import { css } from "@emotion/react";
