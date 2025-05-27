@@ -14,7 +14,6 @@ export const useSearchHandler = ({
 }: UseSearchHandlerOptions) => {
   const router = useRouter();
   const { addHistory } = useSearchHistory();
-  console.log(searchTarget);
   const handleSearch = (keywordOverride?: string) => {
     const keyword = (keywordOverride ?? searchText).trim();
     if (!keyword) return;
