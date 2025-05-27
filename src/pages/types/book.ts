@@ -1,7 +1,12 @@
 export type searchTarget = "title" | "isbn" | "person" | "publisher";
 export type sortType = "accuracy" | "latest";
 
-export type SearchBooksParams = {
+export interface BookSearchTargetType {
+  title: string;
+  value: searchTarget;
+}
+
+export type BookSearchParams = {
   query: string;
   sort?: sortType;
   page?: number;

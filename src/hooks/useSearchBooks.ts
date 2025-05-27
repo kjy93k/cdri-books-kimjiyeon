@@ -1,8 +1,8 @@
 import { getBooks } from "@/lib/api/book";
-import { SearchBooksParams } from "@/pages/types/book";
+import { BookSearchParams } from "@/pages/types/book";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
-export const useSearchBooks = (params: SearchBooksParams) => {
+export const useSearchBooks = (params: BookSearchParams) => {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage } =
     useInfiniteQuery({
       queryKey: ["books", params],

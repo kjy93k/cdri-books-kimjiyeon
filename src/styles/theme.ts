@@ -15,6 +15,12 @@ export const theme = {
       secondary: "#555555",
       subtitle: "#999999",
     },
+    border: {
+      primary: "#DED6DA",
+    },
+    ui: {
+      gray: "#B1B8C0",
+    },
   },
 
   typography: {

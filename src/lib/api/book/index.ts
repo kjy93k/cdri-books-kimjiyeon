@@ -1,10 +1,10 @@
-import { BookData, SearchBooksParams } from "@/pages/types/book";
+import { BookData, BookSearchParams } from "@/pages/types/book";
 import axios from "axios";
 const api = axios.create({
   baseURL: "/api",
   withCredentials: true,
 });
-export async function getBooks(params: SearchBooksParams) {
+export async function getBooks(params: BookSearchParams) {
   const res = await api.get<{
     documents: BookData[];
     meta: {
