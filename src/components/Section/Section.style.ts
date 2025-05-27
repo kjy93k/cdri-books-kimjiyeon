@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 export const SectionStyle = styled.section(({ theme }) => ({
   maxWidth: pxToRem(960),
   margin: "0 auto",
-  padding: pxToRem([80, 0]),
+  padding: pxToRem([160, 0]),
 }));
 
 export const SectionTitleStyle = styled.h2(({ theme }) => ({

@@ -16,14 +16,14 @@ const NoData = ({ children }: ComponentBaseProps) => {
       `}
     >
       <Image src={"/images/book.png"} width={80} height={80} alt=""></Image>
-      <p
+      <div
         css={css`
           ${theme.typography.caption};
           ${theme.colors.text.secondary}
         `}
       >
         {children}
-      </p>
+      </div>
     </div>
   );
 };

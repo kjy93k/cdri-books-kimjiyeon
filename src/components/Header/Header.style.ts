@@ -8,6 +8,9 @@ const logoWidth = `${pxToRem(210)}`;
 export const HeaderStyle = styled.header(({ theme }) => ({
   display: "flex",
   width: "100%",
+  position: "fixed",
+  zIndex: 1000,
+  background: theme.colors.palette.white,
 }));
 
 export const HeaderContainerStyle = styled.div(({ theme }) => ({

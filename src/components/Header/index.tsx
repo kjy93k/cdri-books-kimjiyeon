@@ -19,7 +19,7 @@ const Header = () => {
           <NavLinkStyle href={"/"} active={pathname === "/"}>
             도서 검색
           </NavLinkStyle>
-          <NavLinkStyle href={"/favorite"} active={pathname === "/favorite"}>
+          <NavLinkStyle href={"/favorites"} active={pathname === "/favorites"}>
             내가 찜한 책
           </NavLinkStyle>
         </NavStyle>

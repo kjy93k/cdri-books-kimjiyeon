@@ -10,14 +10,14 @@ const BookListDesc = ({ children }: ComponentBaseProps) => {
 
   return (
     <BookListDescStyle isOpen={isOpen}>
-      <p
+      <div
         css={css`
           ${theme.typography.body2Bold};
           margin-bottom: ${pxToRem(12)};
         `}
       >
         책소개
-      </p>
+      </div>
       {children}
     </BookListDescStyle>
   );
